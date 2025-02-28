@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import ProductGrid from "./components/ProductGrid";
@@ -46,7 +46,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <BrowserRouter>
       <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
         <CssBaseline />
         <Navbar />
@@ -73,7 +73,7 @@ const App = () => {
         </Routes>
         <Footer />
       </Box>
-    </Router>
+    </BrowserRouter>
   );
 };
 
